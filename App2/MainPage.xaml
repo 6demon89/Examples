@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerik="using:Telerik.UI.Xaml.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <telerikChart:RadCartesianChart x:Name="scatterPointSeries">
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.Behaviors>
+                <telerikChart:ChartPanAndZoomBehavior ZoomMode="Both" PanMode="Horizontal"/>
+                <telerikChart:ChartTooltipBehavior/>
+            </telerikChart:RadCartesianChart.Behaviors>
+            
+            <telerikChart:ScatterPointSeries ItemsSource="{Binding}">
+                <telerikChart:ScatterPointSeries.XValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="XValue"/>
+                </telerikChart:ScatterPointSeries.XValueBinding>
+                <telerikChart:ScatterPointSeries.YValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="YValue"/>
+                </telerikChart:ScatterPointSeries.YValueBinding>
+            </telerikChart:ScatterPointSeries>
+        </telerikChart:RadCartesianChart>
+        <StackPanel Grid.Row="1">
+            <Button Content="Add" Click="Button_Click"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</Page>

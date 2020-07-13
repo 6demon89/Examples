@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="TelerikWpfApp1.template"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TelerikWpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="DimGray" BorderThickness="3" Background="Gray">
+            <TextBlock Text="Input field header" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" />
+        </Border>
+        <DockPanel Grid.Row="1" LastChildFill="False">
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text=" some input"/>
+                <ComboBox BorderBrush="AliceBlue" Grid.Column="1"/>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text=" some input"/>
+                <ComboBox BorderBrush="AliceBlue" Grid.Column="1"/>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text=" some input"/>
+                <ComboBox BorderBrush="AliceBlue" Grid.Column="1"/>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text=" some input"/>
+                <ComboBox BorderBrush="AliceBlue" Grid.Column="1"/>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text=" some input"/>
+                <ComboBox BorderBrush="AliceBlue" Grid.Column="1"/>
+            </Grid>
+
+
+        </DockPanel>
+    </Grid>
+</UserControl>
