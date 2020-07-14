@@ -11,9 +11,31 @@
         <Grid.Resources>
             <local:RangeToColorConverter x:Key="c"/>
         </Grid.Resources>
-        <TextBox
-            Height="30"
-            Width="400"
-            Foreground="{Binding RelativeSource={RelativeSource Mode=Self},Path=Text,Converter={StaticResource c}}"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Alhpa"  Width="50"/>
+                <TextBox x:Name="Alpha"  Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Red" Width="50"/>
+                <TextBox x:Name="Red" Width="50" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Green"  Width="50"/>
+                <TextBox x:Name="Green"  Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Blue"  Width="50"/>
+                <TextBox x:Name="Blue"  Width="50"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid.Background>
+            <MultiBinding Converter="{StaticResource c}" UpdateSourceTrigger="PropertyChanged">
+                <Binding Path="Text" ElementName="Green"/>
+                <Binding Path="Text" ElementName="Alpha"/>
+                <Binding Path="Text" ElementName="Red"/>
+                <Binding Path="Text" ElementName="Blue"/>
+            </MultiBinding>
+        </Grid.Background>
     </Grid>
 </Window>
